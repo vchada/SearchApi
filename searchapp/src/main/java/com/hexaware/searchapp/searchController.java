@@ -18,7 +18,6 @@ public class searchController
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.set("Authorization","Bearer "+"OYfL_4_H87ydMrsP8qjpYJEf1ioVZJ3GVF2w0bWMlg9Jj0q-LCmFUqAkjCsdRFu-zZX6GCRaTFfY3moxqm4vOvPNmKpEppknOPHyKYzULX9sHE4Xu8PVM489yC90XHYx");
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         return restTemplate.exchange("https://api.yelp.com/v3/businesses/search?term="+term+"&location="+location
